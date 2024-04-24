@@ -128,3 +128,18 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+
+# Ignore node_modules directory (contains installed npm packages)
+frontend/node_modules/
+
+# Ignore build output
+frontend/build/
+
+# Ignore logs and other generated files
+backend/logs/
+backend/.venv/
+backend/venv_backend/
+backend/.mypy_cache/
+backend/.pytest_cache/
+.DS_Store
