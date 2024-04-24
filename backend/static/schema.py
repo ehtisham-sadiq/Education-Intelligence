@@ -1,0 +1,1 @@
+# This file contains the schema for the data-class
