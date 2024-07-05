@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course - Education Intelligence</title>
+    <link rel="stylesheet" href="styles/course.css">
+</head>
+<body>
+    <header>
+        <button onclick="window.history.back();">Back</button>
+        <button onclick="location.href='admin_login.html'">Logout</button>
+    </header>
+    <div class="sidebar">
+        <ul>
+            <li><a href="courses.html">Dashboard</a></li>
+            <li><a href="add_course.html">Add Course</a></li>
+            <li><a href="view_course.html">View Course</a></li>
+            <li><a href="remove_course.html">Remove Course</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </div>
+    <main>
+        <h1>Add Course</h1>
+        <form action="/submit-add-course" method="POST">
+            <label for="course_name">Course Name:</label>
+            <input type="text" id="course_name" name="course_name" required>
+            
+            <label for="course_id">Course ID:</label>
+            <input type="text" id="course_id" name="course_id" required>
+            
+            <label for="class_to_assign">Class to Assign:</label>
+            <select id="class_to_assign" name="class_to_assign" required>
+                <!-- Dynamically populate with classes from database -->
+                <option value="class1">Class 1</option>
+                <option value="class2">Class 2</option>
+            </select>
+            
+            <label for="teacher_to_assign">Teacher to Assign:</label>
+            <select id="teacher_to_assign" name="teacher_to_assign" required>
+                <!-- Dynamically populate with teachers from database -->
+                <option value="teacher1">Teacher 1</option>
+                <option value="teacher2">Teacher 2</option>
+            </select>
+            
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

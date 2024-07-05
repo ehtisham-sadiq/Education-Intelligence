@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Marks - Education Intelligence</title>
+    <link rel="stylesheet" href="styles/teacher_section.css">
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="teacher_panel.html">Dashboard</a></li>
+            <li><a href="view_teacher_profile.html">View Profile</a></li>
+            <li><a href="view_students_profile.html">View Student's Profile</a></li>
+            <li><a href="add_assignment.html">Add Assignment</a></li>
+            <li><a href="add_notes.html">Add Notes/Lessons</a></li>
+            <li><a href="upload_marks.html">Upload Marks</a></li>
+            <li><a href="student_notices.html">Student Notices</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </div>
+    <main>
+        <h1>Upload Marks</h1>
+        <form action="/submit-marks" method="POST" enctype="multipart/form-data">
+            <label for="class">Class:</label>
+            <select id="class" name="class" required>
+                <option value="10A">10A</option>
+                <option value="9B">9B</option>
+            </select>
+            <label for="section">Section:</label>
+            <select id="section" name="section" required>
+                <option value="A">A</option>
+                <option value="B">B</option>
+            </select>
+            <label for="marks">Upload Marks File:</label>
+            <input type="file" id="marks" name="marks" accept=".csv" required>
+            <button type="submit">Upload Marks</button>
+        </form>
+    </main>
+</body>
+</html>

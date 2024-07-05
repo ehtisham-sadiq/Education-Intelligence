@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Student - Education Intelligence</title>
+    <link rel="stylesheet" href="styles/student.css">
+</head>
+<body>
+    <header>
+        <button onclick="window.history.back();">Back</button>
+        <button onclick="location.href='admin_login.html'">Logout</button>
+    </header>
+    <div class="sidebar">
+        <ul>
+            <li><a href="students.html">Dashboard</a></li>
+            <li><a href="add_student.html">Add Student</a></li>
+            <li><a href="remove_student.html">Remove Student</a></li>
+            <li><a href="view_student.html">View Student</a></li>
+            <li><a href="admin_login.html">Logout</a></li>
+        </ul>
+    </div>
+    <main>
+        <h1>Remove Student</h1>
+        <form action="/submit-remove-student" method="POST">
+            <label for="student_id">Select Student to Remove:</label>
+            <select id="student_id" name="student_id" required>
+                <!-- Dynamically populate with students -->
+                <option value="student1_id">Student 1</option>
+                <option value="student2_id">Student 2</option>
+                <!-- Additional student options should be added here -->
+            </select>
+            <button type="submit">Remove Student</button>
+        </form>
+    </main>
+</body>
+</html>

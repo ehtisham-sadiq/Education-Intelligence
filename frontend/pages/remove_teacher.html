@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Teacher - Education Intelligence</title>
+    <link rel="stylesheet" href="styles/teacher.css">
+</head>
+<body>
+    <header>
+        <button onclick="window.history.back();">Back</button>
+        <button onclick="location.href='admin_login.html'">Logout</button>
+    </header>
+    <div class="sidebar">
+        <ul>
+            <li><a href="teachers.html">Dashboard</a></li>
+            <li><a href="add_teacher.html">Add Teacher</a></li>
+            <li><a href="remove_teacher.html">Remove Teacher</a></li>
+            <li><a href="view_teacher.html">View Teacher</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </div>
+    <main>
+        <h1>Remove Teacher</h1>
+        <form action="/submit-remove-teacher" method="POST">
+            <label for="teacher_id">Select Teacher to Remove:</label>
+            <select id="teacher_id" name="teacher_id" required>
+                <!-- Dynamically populate with teachers -->
+                <option value="teacher1_id">Teacher 1</option>
+                <option value="teacher2_id">Teacher 2</option>
+                <!-- Add more options as per your application data -->
+            </select>
+            <button type="submit">Remove Teacher</button>
+        </form>
+    </main>
+</body>
+</html>

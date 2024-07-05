@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Conversion Tools - Education Intelligence</title>
+    <link rel="stylesheet" href="styles/classes.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo.jpeg" alt="Education Intelligence Logo" class="logo">
+            <div class="header-buttons">
+                <button onclick="window.history.back();">Back</button>
+                <button onclick="location.href='student_login.html'">Logout</button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+        </nav>
+    </header>
+    <nav>
+        <a href="class_content.html">Back to Class Content</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Enhance Your Learning Experience</h2>
+            <button onclick="convertTextToVoice()">Convert Text to Voice</button>
+            <button onclick="convertVoiceToText()">Convert Voice to Text</button>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Education Intelligence. All rights reserved.</p>
+    </footer>
+    <script>
+        function convertTextToVoice() {
+            alert('Converting text to voice...');
+        }
+        function convertVoiceToText() {
+            alert('Converting voice to text...');
+        }
+    </script>
+</body>
+</html>

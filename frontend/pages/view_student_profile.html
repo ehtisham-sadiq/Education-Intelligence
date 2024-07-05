@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Student Profile - Education Intelligence</title>
+    <link rel="stylesheet" href="styles/teacher_section.css">
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="teacher_panel.html">Dashboard</a></li>
+            <li><a href="view_teacher_profile.html">View Profile</a></li>
+            <li><a href="view_students_profile.html">View Student's Profile</a></li>
+            <li><a href="add_assignment.html">Add Assignment</a></li>
+            <li><a href="add_notes.html">Add Notes/Lessons</a></li>
+            <li><a href="upload_marks.html">Upload Marks</a></li>
+            <li><a href="student_notices.html">Student Notices</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </div>
+    <main>
+        <h1>View Student Profile</h1>
+        <form action="/search-student" method="GET">
+            <label for="student_id">Student ID:</label>
+            <input type="text" id="student_id" name="student_id" required>
+            <button type="submit">Search</button>
+        </form>
+        <li>student Records</li>
+        <!-- Details to be dynamically filled based on search -->
+    </main>
+</body>
+</html>

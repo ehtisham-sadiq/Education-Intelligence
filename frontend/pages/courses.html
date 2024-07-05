@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses Dashboard - Education Intelligence</title>
+    <link rel="stylesheet" href="styles/course.css">
+</head>
+<body>
+    <header>
+        <button onclick="window.history.back();">Back</button>
+        <button onclick="location.href='admin_login.html'">Logout</button>
+    </header>
+    <div class="sidebar">
+        <ul>
+            <li><a href="courses.html" class="active">Dashboard</a></li>
+            <li><a href="add_course.html">Add Course</a></li>
+            <li><a href="view_course.html">View Course</a></li>
+            <li><a href="remove_course.html">Remove Course</a></li>
+            <li><a href="admin_login.html">Logout</a></li>
+        </ul>
+    </div>
+    <main>
+        <h1>Courses Dashboard</h1>
+        <div class="course-list">
+            <h2>Available Courses</h2>
+            <!-- Dynamic area where course data will be displayed -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course ID</th>
+                        <th>Course Name</th>
+                        <th>Assigned Class</th>
+                        <th>Assigned Teacher</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example row -->
+                    <tr>
+                        <td>101</td>
+                        <td>Introduction to Biology</td>
+                        <td>Class 10</td>
+                        <td>Dr. Smith</td>
+                        <td>An introductory course on Biology...</td>
+                        <td>
+                            <a href="view_course.html?course_id=101">View</a> |
+                            <a href="edit_course.html?course_id=101">Edit</a> |
+                            <a href="remove_course.html?course_id=101">Remove</a>
+                        </td>
+                    </tr>
+                    <!-- Additional rows will be dynamically generated from database -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p>Project created by Ehtisham</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Teacher - Education Intelligence</title>
+    <link rel="stylesheet" href="styles/teacher.css">
+</head>
+<body>
+    <header>
+        <button onclick="window.history.back();">Back</button>
+        <button onclick="location.href='admin_login.html'">Logout</button>
+    </header>
+    <div class="sidebar">
+        <ul>
+            <li><a href="teachers.html">Dashboard</a></li>
+            <li><a href="add_teacher.html">Add Teacher</a></li>
+            <li><a href="view_teacher.html">View Teacher</a></li>
+            <li><a href="admin_login.html">Logout</a></li>
+        </ul>
+    </div>
+    <main>
+        <h1>Add Teacher</h1>
+        <form action="/submit-teacher-info" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone_number">Mobile No:</label>
+            <input type="text" id="phone_number" name="phone_number" required>
+            
+            <label for="cnic">CNIC:</label>
+            <input type="text" id="cnic" name="cnic" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            
+            <label for="subjects">Subject:</label>
+            <select id="subjects" name="subjects" multiple>
+                <option value="Math">Math</option>
+                <option value="Science">Science</option>
+                <option value="History">History</option>
+            </select>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

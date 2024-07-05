@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Course - Education Intelligence</title>
+    <link rel="stylesheet" href="styles/course.css">
+</head>
+<body>
+    <header>
+        <button onclick="window.history.back();">Back</button>
+        <button onclick="location.href='admin_login.html'">Logout</button>
+    </header>
+    <div class="sidebar">
+        <ul>
+            <li><a href="courses.html">Dashboard</a></li>
+            <li><a href="add_course.html">Add Course</a></li>
+            <li><a href="view_course.html">View Course</a></li>
+            <li><a href="remove_course.html">Remove Course</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </div>
+    <main>
+        <h1>Remove Course</h1>
+        <form action="/submit-remove-course" method="POST">
+            <label for="course_to_remove">Select Course to Remove:</label>
+            <select id="course_to_remove" name="course_to_remove" required>
+                <!-- Dynamically populate with courses -->
+                <option value="course1">Course 1</option>
+                <option value="course2">Course 2</option>
+            </select>
+            <button type="submit">Remove Course</button>
+        </form>
+    </main>
+</body>
+</html>

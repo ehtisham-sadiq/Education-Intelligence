@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Classes - Education Intelligence</title>
+    <link rel="stylesheet" href="styles/classes.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo.jpeg" alt="Education Intelligence Logo" class="logo">
+            <div class="header-buttons">
+                <button onclick="window.history.back();">Back</button>
+                <button onclick="location.href='student_login.html'">Logout</button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+        </nav>
+    </header>
+    <nav>
+        <a href="student_panel.html">Back to Dashboard</a>
+    </nav>
+    <main>
+        <ul class="class-list">
+            <!-- Dynamically generated list of classes -->
+            <li><a href="#" onclick="promptFaceRecognition('Mathematics - Class 10A')">Mathematics - Class 10A</a></li>
+            <li><a href="#" onclick="promptFaceRecognition('Science - Class 9B')">Science - Class 9B</a></li>
+            <!-- More classes can be added here -->
+        </ul>
+    </main>
+    <script>
+        function promptFaceRecognition(className) {
+            alert('Initiating face recognition for ' + className);
+            // Simulate face recognition check
+            setTimeout(() => {
+                location.href = 'class_content.html?class=' + encodeURIComponent(className);
+            }, 2000); // Redirect after 2 seconds
+        }
+    </script>
+    <footer>
+        <p>© 2024 Education Intelligence. All rights reserved.</p>
+    </footer>
+</body>
+</html>

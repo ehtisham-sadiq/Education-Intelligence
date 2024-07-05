@@ -1,0 +1,158 @@
+/* General Reset and Typography */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header Styling */
+header {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img.logo {
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a, header nav ul li select {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover, header nav ul li select:hover {
+    background-color: #0056b3;
+}
+
+/* Dropdown styling */
+select {
+    background: #007BFF;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10c;
+    border-radius: 5px;
+}
+
+/* Main Content Styling */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    background: #ffffff;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+}
+
+.main-content div, .main-content form {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    width: 300px; /* Ensures forms and divs don't stretch too wide */
+}
+
+.main-content h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.main-content p, .main-content ul {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Features List Styling */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #007BFF;
+    color: white;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .main-content div, .main-content form {
+        width: auto;
+    }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Education Intelligence</title>
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.jpeg" alt="Education Intelligence Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-content">
+        <h1>Admin Login</h1>
+        <!-- Changed method to GET for simplicity, adjust according to your server handling -->
+        <form action="admin_panel.html" method="GET">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" value="admin" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" value="admin" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <footer>
+        <p>Project created by Ehtisham</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
