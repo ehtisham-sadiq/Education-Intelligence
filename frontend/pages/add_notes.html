@@ -5,27 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Notes/Lessons - Education Intelligence</title>
     <link rel="stylesheet" href="styles/teacher_section.css">
+    <link rel="stylesheet" href="../css/header_style.css">
+    <link rel="stylesheet" href="../css/footer_style.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="sidebar">
-        <ul>
-            <li><a href="teacher_panel.html">Dashboard</a></li>
-            <li><a href="view_teacher_profile.html">View Profile</a></li>
-            <li><a href="view_students_profile.html">View Student's Profile</a></li>
-            <li><a href="add_assignment.html">Add Assignment</a></li>
-            <li><a href="add_notes.html">Add Notes/Lessons</a></li>
-            <li><a href="upload_marks.html">Upload Marks</a></li>
-            <li><a href="student_notices.html">Student Notices</a></li>
-            <li><a href="logout.html">Logout</a></li>
-        </ul>
+    <header>
+        <div>
+            <img src="../images/logo.jpeg" alt="Education Intelligence Logo" class="logo">
+            <div class="title-nav">
+                <h1>Education Intelligence</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="features.html">Features</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+    <div class="sidebar sticky-top">
+        <div class="bg-light p-4">
+            <p class="h5 mb-4">Login as: Teacher</p>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link active" href="teacher_panel.html">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="view_teacher_profile.html">View Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="view_student_profile.html">View Student's Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="add_assignment.html">Add Assignment</a></li>
+                <li class="nav-item"><a class="nav-link" href="add_notes.html">Add Notes/Lessons</a></li>
+                <li class="nav-item"><a class="nav-link" href="upload_marks.html">Upload Marks</a></li>
+                <li class="nav-item"><a class="nav-link" href="student_notices.html">Student Notices</a></li>
+                <li class="nav-item"><a class="nav-link" href="teacher_login.html">Logout</a></li>
+            </ul>
+        </div>
     </div>
     <main>
         <h1>Add Notes or Lessons</h1>
         <form action="/submit-notes" method="POST" enctype="multipart/form-data">
             <label for="class">Class:</label>
             <select id="class" name="class" required>
-                <option value="10A">10A</option>
-                <option value="9B">9B</option>
+                <option value="Software Engineering">Software Engineering</option>
+                <option value="Computer Science">Computer Science</option>
             </select>
             <label for="section">Section:</label>
             <select id="section" name="section" required>
@@ -37,5 +59,8 @@
             <button type="submit">Upload Notes</button>
         </form>
     </main>
+    <footer>
+        <p>© 2024 Education Intelligence. Developed by Sahar Afzal, Wisha fatima & Ghaniya Usmani under the Supervision of Dr. Ilyas Fakhir. All rights reserved.</p>
+    </footer>
 </body>
 </html>

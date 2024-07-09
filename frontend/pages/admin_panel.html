@@ -5,33 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Education Intelligence</title>
     <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="../css/footer_style.css">
+    <link rel="stylesheet" href="../css/header_style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <img src="images/logo.jpeg" alt="Education Intelligence Logo" class="logo">
-            <div class="header-buttons">
-                <button onclick="window.history.back();">Back</button>
-                <button onclick="location.href='admin_login.html'">Logout</button>
+    <header >
+        <div >
+            <img src="../images/logo.jpeg" alt="Education Intelligence Logo" class="logo float-left">
+            <h1 class="title-nav">Education Intelligence</h1> <!-- Centered title -->
+            <div class="header-buttons float-right">
+                <button onclick="window.history.back();" class="btn btn-outline-secondary">Back</button>
+                <button onclick="location.href='admin_login.html'" class="btn btn-outline-danger">Logout</button>
             </div>
         </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="features.html">Features</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+                <li><a href="../features.html">Features</a></li>
             </ul>
         </nav>
     </header>
-    <div class="sidebar">
-        <p>Login as: Admin</p>
-        <ul>
-            <li><a href="admin_panel.html">Dashboard</a></li>
-            <li><a href="view_admin_profile.html">View Profile</a></li>
-            <li><a href="edit_admin_profile.html">Edit Profile</a></li>
-            <li><a href="admin_login.html">Logout</a></li>
-        </ul>
+    <div class="sidebar sticky-top">
+        <div class="bg-light p-4">
+            <p class="h5 mb-4">Login as: Admin</p>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link active" href="admin_panel.html">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="view_admin_profile.html">View Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="edit_admin_profile.html">Edit Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="admin_login.html">Logout</a></li>
+            </ul>
+        </div>
     </div>
     <main class="main-content">
         <h1>Welcome to Education Intelligence Admin Panel</h1>
@@ -51,7 +58,7 @@
         </div>
     </main>
     <footer>
-        <p>Project created by Ehtisham</p>
+        <p>© 2024 Education Intelligence. Developed by Sahar Afzal, Wisha fatima & Ghaniya Usmani under the Supervision of Dr. Ilyas Fakhir. All rights reserved.</p>
     </footer>
     <script src="js/dashboard.js"></script>
 </body>

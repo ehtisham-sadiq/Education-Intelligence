@@ -1,9 +1,9 @@
 /* General Reset */
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 html, body {
     height: 100%;
@@ -12,14 +12,14 @@ html, body {
     color: #333;
 }
 
-body {
+/* body {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-}
+} */
 
-header {
+/* header {
     width: 100%;
     background-color: #0056b3;
     color: white;
@@ -52,7 +52,7 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-}
+} */
 
 .main-content {
     background-color: white;
@@ -103,7 +103,7 @@ button:hover {
     background-color: #218838;
 }
 
-footer {
+/* footer {
     width: 100%;
     background-color: #0056b3;
     color: white;
@@ -114,4 +114,4 @@ footer {
     left: 0;
     right: 0;
     font-size: 15px;
-}
+} */

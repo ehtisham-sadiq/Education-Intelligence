@@ -1,4 +1,3 @@
-/* General Reset and Typography */
 body, html {
     margin: 0;
     padding: 0;
@@ -8,45 +7,6 @@ body, html {
     color: #333;
     background-color: #f4f4f4;
 }
-
-/* Header Styling */
-header {
-    background-color: #007BFF;
-    color: #ffffff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header img.logo {
-    height: 50px;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin-left: 20px;
-}
-
-header nav ul li a, header nav ul li select {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1em;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-header nav ul li a:hover, header nav ul li select:hover {
-    background-color: #0056b3;
-}
-
-/* Dropdown styling */
 select {
     background: #007BFF;
     border: none;
@@ -54,8 +14,6 @@ select {
     padding: 5px 10c;
     border-radius: 5px;
 }
-
-/* Main Content Styling */
 .main-content {
     display: flex;
     flex-direction: column;
@@ -71,7 +29,7 @@ select {
     flex: 1;
     margin: 10px;
     padding: 20px;
-    width: 300px; /* Ensures forms and divs don't stretch too wide */
+    width: 300px; 
 }
 
 .main-content h1 {
@@ -86,7 +44,6 @@ select {
     color: #666;
 }
 
-/* Form Styling */
 form {
     display: flex;
     flex-direction: column;
@@ -118,34 +75,15 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Features List Styling */
 ul {
     list-style-type: disc;
     padding-left: 20px;
 }
 
-/* Footer Styling */
-footer {
-    text-align: center;
-    padding: 20px 10px;
-    background-color: #007BFF;
-    color: white;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-}
-
-footer p {
-    margin: 0;
-    font-size: 1em;
-}
-
-/* Utility Classes */
 .text-center {
     text-align: center;
 }
 
-/* Responsive Layout */
 @media (max-width: 768px) {
     .main-content {
         flex-direction: column;
@@ -156,3 +94,61 @@ footer p {
         width: auto;
     }
 }
+
+
+.features-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    background: #ffffff;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    width: 80%; /* Setting width to manage spacing */
+    max-width: 800px; /* Limiting max width for better content display */
+    margin: 40px auto; /* Centering content vertically and horizontally */
+}
+
+.features-content h1 {
+    color: #0056b3; /* Making the color consistent with button hover state */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.features-content ul {
+    font-size: 1.1em; /* Slightly larger font size for better readability */
+    line-height: 1.8; /* Increased line height for better text spacing */
+    color: #333; /* Darker color for better contrast */
+    list-style-type: none; /* Removing bullets for a cleaner look */
+    padding-left: 0;
+}
+
+.features-content ul li {
+    margin-bottom: 10px; /* Adding space between list items */
+    padding-left: 20px; /* Space for pseudo-element */
+    position: relative;
+}
+
+.features-content ul li::before {
+    content: "•"; /* Unicode character for custom bullet */
+    color: #007BFF; /* Bullet color to match theme */
+    position: absolute;
+    left: 0;
+    font-size: 20px; /* Larger bullet size */
+    line-height: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .features-content {
+        flex-direction: column;
+        width: 90%; /* Making content width responsive */
+        padding: 20px;
+    }
+
+    .features-content div, .features-content form {
+        width: auto; /* Ensuring width adjusts to device size */
+    }
+}
+

@@ -8,7 +8,7 @@ body, html {
     line-height: 1.6;
 }
 
-/* Header Styles */
+/* Header Styles
 header {
     background-color: #0056b3;
     color: #fff;
@@ -17,7 +17,6 @@ header {
     font-size: 1.4em;
 }
 
-/* Navigation Styles */
 nav {
     background-color: #e1e1e1;
     padding: 10px;
@@ -31,7 +30,7 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-}
+} */
 
 /* Main Content Area */
 main {
@@ -68,17 +67,6 @@ section {
     margin-top: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer Styles */
-footer {
-    background-color: #0056b3;
-    color: white;
-    text-align: center;
-    padding: 10px 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
 /* Button Styles for Tools */

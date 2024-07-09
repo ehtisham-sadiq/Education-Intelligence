@@ -5,23 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Teacher - Education Intelligence</title>
     <link rel="stylesheet" href="styles/teacher_section.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="../css/footer_style.css">
+    <link rel="stylesheet" href="../css/header_style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <button onclick="window.history.back();">Back</button>
-        <button onclick="location.href='admin_login.html'">Logout</button>
+    <header >
+        <div >
+            <img src="../images/logo.jpeg" alt="Education Intelligence Logo" class="logo float-left">
+            <h1 class="title-nav">Education Intelligence</h1> <!-- Centered title -->
+            <div class="header-buttons float-right">
+                <button onclick="window.history.back();" class="btn btn-outline-secondary">Back</button>
+                <button onclick="location.href='teacher_login.html'" class="btn btn-outline-danger">Logout</button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+                <li><a href="../features.html">Features</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="sidebar">
-        <ul>
-            <li><a href="teachers.html">Dashboard</a></li>
-            <li><a href="add_teacher.html">Add Teacher</a></li>
-            <li><a href="view_teacher.html">View Teacher</a></li>
-            <li><a href="login.html">Logout</a></li>
-        </ul>
+    <div class="sidebar sticky-top">
+        <div class="bg-light p-4">
+            <p class="h5 mb-4">Login as: Admin</p>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link active" href="teachers.html">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="add_teacher.html">Add Teacher</a></li>
+                <li class="nav-item"><a class="nav-link" href="view_teacher.html">View Teacher</a></li>
+                <li class="nav-item"><a class="nav-link" href="teacher_login.html">Logout</a></li>
+            </ul>
+        </div>
     </div>
     <main>
         <h1>View Teacher</h1>
-        <p>Details of a specific teacher...</p>
+        <!-- implement a form to get teacher on the basis of teacher ID -->
+        <form action="/submit-teacher-info" method="POST">
+            <label for="teacher_id">Teacher ID:</label>
+            <input type="text" id="teacher_id" name="teacher_id" required>
+            <button type="submit" class="btn btn-primary">View Teacher</button>
+        </form>
     </main>
+    <footer>
+        <p>© 2024 Education Intelligence. Developed by Sahar Afzal, Wisha fatima & Ghaniya Usmani under the Supervision of Dr. Ilyas Fakhir. All rights reserved.</p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,15 @@
+footer {
+    background-color: #17d887; /* Consistent with header, adjust if needed */
+    color: #080707;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-top: 1px solid #0062cc; /* Slightly darker border for a subtle distinction */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for lifting the footer visually */
+    /* make footer text bold */
+    font-style: bold;
+}

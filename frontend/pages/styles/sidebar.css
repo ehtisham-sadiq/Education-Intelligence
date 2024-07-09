@@ -1,0 +1,49 @@
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.header-buttons button {
+    margin-left: 5px; /* Space between buttons */
+}
+nav.navbar {
+    margin-top: 2px; /* Additional space below header content */
+}
+
+.sidebar {
+    position: fixed;
+    top: 80px;  /* Adjust this value based on your header's actual height */
+    left: 0;
+    width: 200px;
+    height: calc(100% - 80px);  /* Adjust based on the header height */
+    background-color: #f8f9fa;
+    z-index: 1000;
+}
+
+.sidebar .nav {
+    display: block;
+}
+
+.sidebar .nav-link {
+    padding: 0.75rem 1.25rem;
+    color: black;
+    font-weight: bold;
+    border-left: 3px solid transparent;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    color: #28a745;
+    background-color: #e9ecef;
+    border-left-color: #28a745;
+}
+
+.header-content .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-buttons button {
+    margin-right: 10px;
+}

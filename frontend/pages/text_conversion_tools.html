@@ -5,28 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Conversion Tools - Education Intelligence</title>
     <link rel="stylesheet" href="styles/classes.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="../css/footer_style.css">
+    <link rel="stylesheet" href="../css/header_style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <img src="images/logo.jpeg" alt="Education Intelligence Logo" class="logo">
-            <div class="header-buttons">
-                <button onclick="window.history.back();">Back</button>
-                <button onclick="location.href='student_login.html'">Logout</button>
+    <header >
+        <div >
+            <img src="../images/logo.jpeg" alt="Education Intelligence Logo" class="logo float-left">
+            <h1 class="title-nav">Education Intelligence</h1> <!-- Centered title -->
+            <div class="header-buttons float-right">
+                <button onclick="window.history.back();" class="btn btn-outline-secondary">Back</button>
+                <button onclick="location.href='student_login.html'" class="btn btn-outline-danger">Logout</button>
             </div>
         </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="features.html">Features</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+                <li><a href="../features.html">Features</a></li>
             </ul>
         </nav>
     </header>
-    <nav>
-        <a href="class_content.html">Back to Class Content</a>
-    </nav>
+    <div class="sidebar sticky-top">
+        <div class="bg-light p-4">
+            <p class="h5 mb-4">Login as: Student</p>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link active" href="class_content.html">Back to Class Content</a></li>
+            </ul>
+        </div>
+    </div>
     <main>
         <section>
             <h2>Enhance Your Learning Experience</h2>
@@ -35,7 +45,7 @@
         </section>
     </main>
     <footer>
-        <p>© 2024 Education Intelligence. All rights reserved.</p>
+        <p>© 2024 Education Intelligence. Developed by Sahar Afzal, Wisha fatima & Ghaniya Usmani under the Supervision of Dr. Ilyas Fakhir. All rights reserved.</p>
     </footer>
     <script>
         function convertTextToVoice() {

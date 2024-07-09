@@ -1,0 +1,65 @@
+header {
+    background-color: #17d887; /* Change color as needed */
+    color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    height: 40px; /* Adjust size as needed */
+    width: 20px;
+    margin-left: 5px; /* Space from the left edge */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 0 5px;
+    /*  move toward left side */
+    margin-left: 40px;
+    /* decrease space between li */
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav select {
+    padding: 7px 12px;
+    border-radius: 7px;
+    background: #17d887;
+    color: #007bff;
+    border: none;
+}
+
+/* Utilizing Flexbox to position elements */
+header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Centering the title and navigation items */
+.title-nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.title-nav h1 {
+    margin-bottom: 5px;
+    font-size: 34px; /* Adjust size as needed */
+}
+
+.title-nav nav {
+    display: inline-block;
+}
