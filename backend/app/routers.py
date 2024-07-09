@@ -1,9 +1,9 @@
 import logging
 import tempfile
-from gtts import gTTS # type: ignore
-from pydub import AudioSegment # type: ignore
+# from gtts import gTTS # type: ignore
+# from pydub import AudioSegment # type: ignore
 from transformers import pipeline
-import moviepy.editor as mp # type: ignore
+# import moviepy.editor as mp # type: ignore
 from typing import List
 
 from fastapi import APIRouter, Depends, HTTPException, status, UploadFile, File
@@ -11,8 +11,8 @@ from fastapi.responses import FileResponse
 
 from sqlalchemy.orm import Session
 from .schema import StudentCreate, Student, TeacherCreate, Teacher, CourseCreate, Course, DocumentCreate, Document, AttendanceCreate, Attendance
-from models.db_models import Student as DBStudent, Teacher as DBTeacher, Course as DBCourse, Document as DBDocument, Attendance as DBAttendance
-from client import session_manager
+from backend.models.db_models import Student as DBStudent, Teacher as DBTeacher, Course as DBCourse, Document as DBDocument, Attendance as DBAttendance
+from backend.client import session_manager
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -34,15 +34,6 @@ def create_student(student: StudentCreate, db: Session = Depends(session_manager
         db.rollback()
         logger.error(f"Error creating student: {e}")
         raise HTTPException(status_code=400, detail=str(e))
-    #     db_student = DBStudent(**student.dict())
-    #     db.add(db_student)
-    #     db.commit()
-    #     db.refresh(db_student)
-    #     return db_student
-    # except Exception as e:
-    #     db.rollback()
-    #     logger.error(f"Error creating student: {e}")
-    #     raise HTTPException(status_code=400, detail=str(e))
 
 @router.get("/students/", response_model=List[Student])
 def read_students(skip: int = 0, limit: int = 100, db: Session = Depends(session_manager)):
@@ -124,33 +115,33 @@ def record_attendance(attendance: AttendanceCreate, db: Session = Depends(sessio
     
     
 # Load Hugging Face pipelines
-summarizer = pipeline("summarization")
-speech_recognizer = pipeline("automatic-speech-recognition")
+# summarizer = pipeline("summarization")
+# speech_recognizer = pipeline("automatic-speech-recognition")
 
-@router.post("/documents/pdf-to-audio")
-async def convert_pdf_to_audio(file: UploadFile = File(...)):
-    try:
-        with tempfile.NamedTemporaryFile(delete=False, suffix='.pdf') as tmp:
-            tmp.write(await file.read())
-            # Assuming text extraction from PDF is already done, use gTTS to convert to audio
-            text = "Extracted text goes here"  # Placeholder for actual text extraction logic
-            tts = gTTS(text)
-            audio_file = tempfile.NamedTemporaryFile(delete=False, suffix='.mp3')
-            tts.save(audio_file.name)
-            return FileResponse(path=audio_file.name, filename="converted_audio.mp3")
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+# @router.post("/documents/pdf-to-audio")
+# async def convert_pdf_to_audio(file: UploadFile = File(...)):
+#     try:
+#         with tempfile.NamedTemporaryFile(delete=False, suffix='.pdf') as tmp:
+#             tmp.write(await file.read())
+#             # Assuming text extraction from PDF is already done, use gTTS to convert to audio
+#             text = "Extracted text goes here"  # Placeholder for actual text extraction logic
+#             tts = gTTS(text)
+#             audio_file = tempfile.NamedTemporaryFile(delete=False, suffix='.mp3')
+#             tts.save(audio_file.name)
+#             return FileResponse(path=audio_file.name, filename="converted_audio.mp3")
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail=str(e))
 
-@router.post("/documents/pdf-to-summary")
-async def convert_pdf_to_summary(file: UploadFile = File(...)):
-    try:
-        with tempfile.NamedTemporaryFile(delete=False, suffix='.pdf') as tmp:
-            tmp.write(await file.read())
-            text = "Extracted text goes here"  # Placeholder for actual text extraction
-            summary = summarizer(text, max_length=130, min_length=30, do_sample=False)
-            return {"summary": summary[0]['summary_text']}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+# @router.post("/documents/pdf-to-summary")
+# async def convert_pdf_to_summary(file: UploadFile = File(...)):
+#     try:
+#         with tempfile.NamedTemporaryFile(delete=False, suffix='.pdf') as tmp:
+#             tmp.write(await file.read())
+#             text = "Extracted text goes here"  # Placeholder for actual text extraction
+#             summary = summarizer(text, max_length=130, min_length=30, do_sample=False)
+#             return {"summary": summary[0]['summary_text']}
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail=str(e))
 
 @router.post("/documents/video-to-audio")
 async def convert_video_to_audio(file: UploadFile = File(...)):
@@ -165,19 +156,19 @@ async def convert_video_to_audio(file: UploadFile = File(...)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@router.post("/documents/video-to-text")
-async def convert_video_to_text(file: UploadFile = File(...)):
-    try:
-        with tempfile.NamedTemporaryFile(delete=False, suffix=file.filename[-4:]) as tmp:
-            tmp.write(await file.read())
-            video = mp.VideoFileClip(tmp.name)
-            audio = video.audio
-            audio_file = tempfile.NamedTemporaryFile(delete=False, suffix='.wav')
-            audio.write_audiofile(audio_file.name)
-            transcription = speech_recognizer(audio_file.name)
-            return {"transcription": transcription['text']}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+# @router.post("/documents/video-to-text")
+# async def convert_video_to_text(file: UploadFile = File(...)):
+#     try:
+#         with tempfile.NamedTemporaryFile(delete=False, suffix=file.filename[-4:]) as tmp:
+#             tmp.write(await file.read())
+#             video = mp.VideoFileClip(tmp.name)
+#             audio = video.audio
+#             audio_file = tempfile.NamedTemporaryFile(delete=False, suffix='.wav')
+#             audio.write_audiofile(audio_file.name)
+#             transcription = speech_recognizer(audio_file.name)
+#             return {"transcription": transcription['text']}
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail=str(e))
 
 @router.post("/documents/alt-pdf-to-audio")
 async def alternative_convert_pdf_to_audio(file: UploadFile = File(...)):

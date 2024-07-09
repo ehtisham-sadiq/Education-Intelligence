@@ -14,7 +14,7 @@ def session_manager():
     db_session = SessionLocal()
     try:
         yield db_session
-        db_session.commit()  # Ensure any changes are committed if no errors occur
+        # db_session.commit()  # Ensure any changes are committed if no errors occur
     except Exception as e:
         db_session.rollback()  # Roll back the transaction on error
         raise e
